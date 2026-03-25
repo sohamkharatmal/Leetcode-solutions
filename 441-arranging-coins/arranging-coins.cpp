@@ -1,16 +1,11 @@
 class Solution {
 public:
     int arrangeCoins(int n) {
-        int div=1;
-    int ct=0;
-    if (n==0 || n==1)return n;
-  
-        while(n>=div){
-            n-=div;
-            div++;
-              ct++;
-             
-        }
-        return ct;
+    int x=1;
+    do{
+        (pow(x,2)+x)/2<n;
+        x++;
+    }while((pow(x-1,2)+x-1)/2<=n);
+    return x-2;
     }
 };
