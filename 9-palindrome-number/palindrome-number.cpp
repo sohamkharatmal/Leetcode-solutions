@@ -5,19 +5,14 @@ public:
         if(x<0 || (x>0 && x%10==0))return false;
       
 
-        vector <int> nums;
-        while(x>=1){
-            int z=x%10;
-            x/=10;
-            nums.push_back(z);
+       
+        int rev = 0;
+
+        while(x > rev){
+            rev = rev * 10 + x % 10;
+            x /= 10;
         }
-        int l=0;
-        int r=nums.size()-1;
-        while(l<r){
-            if(nums[l]!=nums[r]) return false;
-            l++;
-            r--;
-        }
-        return true;
+
+        return (x == rev || x == rev / 10);
     }
 };
