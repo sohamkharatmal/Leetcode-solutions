@@ -1,11 +1,7 @@
 class Solution {
 public:
-bool istriangle(int a,int b,int c){
-    if(a+b>c && a+c>b && b+c>a){
-        return true;
-    }
-    return false;
-}
+
+
     int largestPerimeter(vector<int>& nums) {
        if(nums.size()<3) return 0;
         sort(nums.begin(),nums.end());
