@@ -13,8 +13,8 @@ public:
                 arr.push_back("Buzz");
             }
             else{
-                string st=to_string(i);
-                arr.push_back(st);
+             
+                arr.push_back(to_string(i));
             }
         }
         return arr;
